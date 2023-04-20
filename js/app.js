@@ -1,21 +1,8 @@
-let r, x;
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    r = min(width, height) / 6;
-    x = r;
-    drawCircle();
+
+    // circle(x座標, y座標, 直径) 左上が原点(0, 0)
+    circle(0, 0, 200);
 }
 
-function drawCircle() {
-    clear();
-    circle(x, height / 2, r * 2);
-}
 
-function mouseClicked() {
-    x += 10;
-    if (x > width + r) {
-        x = -r;
-    }
-    drawCircle();
-}
